@@ -1,0 +1,12 @@
+body {font-family: 'Segoe UI', sans-serif; background: #f8fafc; margin: 0; color: #333;}
+header {background: #003366; color: white; padding: 15px 20px; text-align: center;}
+header nav {margin-top: 10px;}
+nav a {margin: 0 10px; color: white; text-decoration: none; font-weight: bold;}
+main {max-width: 700px; margin: 20px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc;}
+form label, form input, form textarea {display: block; width: 100%; margin-bottom: 10px;}
+form input, form textarea {padding: 10px; border: 1px solid #ccc; border-radius: 5px;}
+form button {background: #007bff; color: white; padding: 10px; border: none; width: 100%; border-radius: 5px; font-size: 16px;}
+form button:hover {background: #0056b3;}
+table {width: 100%; border-collapse: collapse;} th, td {border: 1px solid #ccc; padding: 10px;}
+th {background: #007bff; color: white;}
+.btn {display: inline-block; background: #28a745; color: white; padding: 10px 15px; margin: 10px 5px; text-decoration: none; border-radius: 5px;}

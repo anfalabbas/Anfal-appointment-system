@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8">
+<title>نظام الحجز</title><link rel="stylesheet" href="style.css"></head>
+<body><header><h1>نظام حجز المواعيد</h1>
+<nav><a href="index.html">الرئيسية</a> <a href="appointments.html">المواعيد</a> <a href="admin.html">لوحة الإدارة</a></nav></header>
+<main><h2>نموذج حجز موعد</h2><form id="bookingForm">
+<label>الاسم:</label><input type="text" id="name" required>
+<label>الخدمة:</label><input type="text" id="service" required>
+<label>التاريخ:</label><input type="date" id="date" required>
+<label>الوقت:</label><input type="time" id="time" required>
+<label>ملاحظات:</label><textarea id="notes"></textarea>
+<button type="submit">احجز الآن</button></form></main>
+<script src="booking.js"></script></body></html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8">
+<title>المواعيد</title><link rel="stylesheet" href="style.css"></head>
+<body><header><h1>المواعيد المحجوزة</h1>
+<nav><a href="index.html">الرئيسية</a> <a href="appointments.html">المواعيد</a> <a href="admin.html">لوحة الإدارة</a></nav></header>
+<main><table id="appointmentsTable">
+<thead><tr><th>الاسم</th><th>الخدمة</th><th>التاريخ</th><th>الوقت</th><th>ملاحظات</th><th>إجراء</th></tr></thead>
+<tbody></tbody></table></main>
+<script>
+const tbody = document.querySelector("tbody");
+const bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
+function render() {
+  tbody.innerHTML = "";
+  bookings.forEach((b, i) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${b.name}</td><td>${b.service}</td><td>${b.date}</td><td>${b.time}</td><td>${b.notes}</td><td><button onclick="deleteBooking(${i})">حذف</button></td>`;
+    tbody.appendChild(row);
+  });
+}
+function deleteBooking(index) {
+  bookings.splice(index, 1);
+  localStorage.setItem("bookings", JSON.stringify(bookings));
+  render();
+}
+render();
+</script></body></html>
